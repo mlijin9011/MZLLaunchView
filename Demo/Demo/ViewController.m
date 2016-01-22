@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "MZLLaunchViewTools.h"
+#import "MZLLaunchGuideViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <MZLLaunchGuideViewDelegate>
 
 @end
 
@@ -24,12 +25,16 @@
     [super viewWillAppear:animated];
     
     [MZLLaunchViewTools showLaunchStartView:[UIImage imageNamed:@"launch_start_image"] hideAfterDelay:3 withTimer:YES];
-    [MZLLaunchViewTools showLaunchGuideView:@[[UIImage imageNamed:@"guide_image"], [UIImage imageNamed:@"guide_image"], [UIImage imageNamed:@"guide_image"]] withSkip:YES];
+    [MZLLaunchViewTools showLaunchGuideView:@[[UIImage imageNamed:@"guide_image"], [UIImage imageNamed:@"guide_image"], [UIImage imageNamed:@"guide_image"]] withSkip:YES hideDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)didHideGuideView {
+    
 }
 
 @end

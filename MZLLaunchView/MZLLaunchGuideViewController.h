@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MZLLaunchGuideViewDelegate <NSObject>
+
+- (void)didHideGuideView;
+
+@end
+
 @interface MZLLaunchGuideViewController : UIViewController
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSArray *images;
 
 @property (nonatomic) BOOL showSkip;
+
+@property (nonatomic, weak) id<MZLLaunchGuideViewDelegate> delegate;
 
 @end

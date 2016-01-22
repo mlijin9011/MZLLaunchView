@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MZLLaunchView"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "Launch and Guide View Controller"
   s.homepage     = "https://github.com/mlijin9011/MZLLaunchView"
   s.license      = "MIT"

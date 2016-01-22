@@ -93,10 +93,11 @@ static UIWindow *guideViewWindow = nil;
 }
 
 //显示引导页
-+ (void)showLaunchGuideView:(NSArray *)images withSkip:(BOOL)skip {
++ (void)showLaunchGuideView:(NSArray *)images withSkip:(BOOL)skip hideDelegate:(id)delegate {
     MZLLaunchGuideViewController *guideViewController = [[MZLLaunchGuideViewController alloc] init];
     guideViewController.images = images;
     guideViewController.showSkip = skip;
+    guideViewController.delegate = delegate;
     [self guideWindow].rootViewController = guideViewController;
     [self guideWindow].hidden = NO;
 }

@@ -46,6 +46,9 @@
 
 - (void)hideGuideView {
     [MZLLaunchViewTools hideLaunchGuideView:YES];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didHideGuideView)]) {
+        [self.delegate didHideGuideView];
+    }
     if (_images) {
         _images = nil;
     }

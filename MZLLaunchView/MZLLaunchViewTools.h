@@ -21,7 +21,7 @@
 + (void)hideLaunchStartView:(BOOL)animated afterDelay:(NSTimeInterval)delay;
 
 //显示引导页
-+ (void)showLaunchGuideView:(NSArray *)images withSkip:(BOOL)skip;
++ (void)showLaunchGuideView:(NSArray *)images withSkip:(BOOL)skip hideDelegate:(id)delegate;
 
 //隐藏引导页
 + (void)hideLaunchGuideView:(BOOL)animated;
