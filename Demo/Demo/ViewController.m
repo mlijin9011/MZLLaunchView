@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MZLLaunchViewTools.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [MZLLaunchViewTools showLaunchStartView:[UIImage imageNamed:@"launch_start_image"] hideAfterDelay:3 withTimer:YES];
+    [MZLLaunchViewTools showLaunchGuideView:@[[UIImage imageNamed:@"guide_image"], [UIImage imageNamed:@"guide_image"], [UIImage imageNamed:@"guide_image"]] withSkip:YES];
 }
 
 - (void)didReceiveMemoryWarning {
